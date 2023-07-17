@@ -1,0 +1,62 @@
+.container{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    position: relative;
+    display: grid;
+    height: 40px;
+    width: 120px;
+    border:  white;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+
+.btn .ibtn{
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    
+} 
+
+.btn span{
+    position: absolute;
+    justify-self: center;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+.btn:hover .ibtn{
+    animation-name: extend;
+    animation-timing-function: ease;
+    animation-duration: .8s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+} 
+
+@keyframes extend {
+    from{
+        width: 0%;
+        background-color: red;
+    }
+
+    to{
+        width: 120px;
+        background-color: black;
+    }
+}
+
